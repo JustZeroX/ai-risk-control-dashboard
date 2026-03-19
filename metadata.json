@@ -1,0 +1,5 @@
+{
+  "name": "AI Risk Control Dashboard",
+  "description": "Dashboard for managing large model user violations and account bans.",
+  "requestFramePermissions": []
+}
