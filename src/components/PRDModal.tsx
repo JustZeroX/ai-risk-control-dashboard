@@ -13,8 +13,9 @@ export const PRDModal: React.FC<PRDModalProps> = ({ isOpen, onClose }) => {
 
   useEffect(() => {
     if (isOpen) {
-      // Fetch the markdown file content
-      fetch('/需求.md')
+      // Fetch the markdown file content using Vite's base URL
+      // @ts-ignore: Vite injects import.meta.env
+      fetch(`${import.meta.env.BASE_URL}需求.md`)
         .then(res => res.text())
         .then(text => setContent(text))
         .catch(err => console.error('Failed to load PRD:', err));
